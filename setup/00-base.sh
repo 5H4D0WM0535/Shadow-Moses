@@ -47,7 +47,8 @@ EOF"
 # Required for tools like Steam dependencies, Wine, etc.
 echo "[Base] Enabling multilib repository..."
 
-sudo sed -i '/\[multilib\]/,/Include/' 's/^#//' /etc/pacman.conf
+echo "[multilib]" | sudo tee -a /etc/pacman.conf
+echo "Include = /etc/pacman.d/mirrorlist" | sudo tee -a /etc/pacman.conf
 
 # -------------------------------------------------
 # 5. Update package database after config changes
