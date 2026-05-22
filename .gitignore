@@ -1,0 +1,16 @@
+# system
+*.swp
+*.swo
+.DS_Store
+
+# logs
+*.log
+
+# secrets
+.env
+*.key
+
+# build artifacts
+out/
+build/
+iso/out/
